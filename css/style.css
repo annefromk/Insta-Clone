@@ -1,0 +1,93 @@
+.icon_insta_logo {
+  display: inline-block;
+	background: url('../imgs/background01.png') no-repeat -53px -235px;
+	width: 22px;
+	height: 22px;
+}
+
+.icon_write_logo {
+  display: inline-block;
+	background: url('../imgs/background01.png') no-repeat -94px -72px;
+	width: 103px;
+	height: 29px;
+}
+
+
+
+
+body{
+  background:#fafafa;
+}
+
+#header{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background:white;
+  border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+
+#header .inner{
+  width: 975px;
+  height: 77px;
+  margin: 0 auto;
+}
+
+#header .inner .logo > a{
+  color:transparent;
+}
+
+#header .inner .logo div {
+  vertical-align: middle;
+}
+
+
+#main_container{
+  padding-top: 130px;
+  display: flex; /*컨텐츠가 가운데 들어가야함 */
+  justify-content: center;
+}
+
+#main_container .inner{
+  width: 935px;
+  height: 500px;
+  background: skyblue;
+}
+
+.contents_box {
+
+}
+
+.contents {
+  width: 614px;
+  height: 500px;
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: 3px; 
+  margin-bottom: 60px;
+  background: white;
+}
+
+.contents .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.contents .top .profile_img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.contents .top .profile_img img{
+  width: 100%;
+}
+
+.contents .top .user_container{
+  display: flex;
+}
