@@ -1,3 +1,5 @@
+
+/* background-img 활용하기 */
 .icon_insta_logo {
   display: inline-block;
 	background: url('../imgs/background01.png') no-repeat -53px -235px;
@@ -12,6 +14,14 @@
 	height: 29px;
 }
 
+.m_text{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.s_text{
+  font-size: 12px;
+}
 
 
 
@@ -21,15 +31,19 @@ body{
 
 #header{
   width: 100%;
+  /* 공중에 띄울 때 absolute */
   position: absolute;
   left: 0;
   top: 0;
+  /* 가장 위에 올라와야 있어야함  */
   z-index: 999;
   background:white;
   border-bottom:1px solid rgba(0, 0, 0, 0.1);
+  /* solid는 단선을 의미 */
 }
 
 #header .inner{
+  /* 높이값은 inner에 줘야함 */
   width: 975px;
   height: 77px;
   margin: 0 auto;
@@ -47,11 +61,12 @@ body{
 #main_container{
   padding-top: 130px;
   display: flex; /*컨텐츠가 가운데 들어가야함 */
-  justify-content: center;
+  justify-content: center;   /* x축 가운데 정렬 */
 }
 
 #main_container .inner{
-  width: 935px;
+  /* 반응형으로 만들때 width와 height값 고쳐주기 */
+  width: 935px; 
   height: 500px;
   background: skyblue;
 }
@@ -62,9 +77,9 @@ body{
 
 .contents {
   width: 614px;
-  height: 500px;
+  /* height: 500px; */
   border: 1px solid rgba(0,0,0,0.09);
-  border-radius: 3px; 
+  border-radius: 3px;  /* 약간 둥근 네모 */
   margin-bottom: 60px;
   background: white;
 }
@@ -80,7 +95,7 @@ body{
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; /* 자식인 profile img가 넘치지 않게 */
   margin-right: 10px;
 }
 
@@ -88,6 +103,15 @@ body{
   width: 100%;
 }
 
+/* 프로필, 닉네임/위치를 가로 정렬하도록 부모를 flex */
 .contents .top .user_container{
   display: flex;
+}
+
+.contents .img_section{
+  overflow:hidden; /* 자식인 profile img가 넘치지 않게 */
+}
+
+.contents .img_section img{
+  width: 100%
 }
