@@ -14,6 +14,110 @@
 	height: 29px;
 }
 
+.sprite_insta_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -53px -235px;
+  width: 22px;
+  height: 22px;
+}
+
+.sprite_write_logo {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -94px -72px;
+  width: 103px;
+  height: 29px;
+}
+
+.sprite_compass_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -130px -286px;
+  width: 23px;
+  height: 23px;
+}
+
+.sprite_user_icon_outline {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -272px -182px;
+  width: 22px;
+  height: 24px;
+}
+
+.sprite_heart_icon_outline {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -52px -261px;
+  width: 24px;
+  height: 22px;
+}
+
+.sprite_small_search_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -337px -246px;
+  width: 10px;
+  height: 10px;
+}
+
+.sprite_more_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -301px -218px;
+  width: 15px;
+  height: 3px;
+}
+
+.sprite_bubble_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -239px -202px;
+  width: 24px;
+  height: 24px;
+}
+
+.sprite_share_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -324px -52px;
+  width: 21px;
+  height: 24px;
+}
+
+.sprite_bookmark_outline {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -237px -286px;
+  width: 19px;
+  height: 24px;
+}
+.sprite_bookmark_outline.on {
+  background: url('../imgs/background01.png') no-repeat -159px -286px;
+  width: 19px;
+  height: 24px;
+}
+
+.sprite_small_heart_icon_outline {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -323px -274px;
+  width: 12px;
+  height: 11px;
+}
+
+.sprite_camera_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -271px -104px;
+  width: 24px;
+  height: 22px;
+}
+
+.sprite_insta_big_logo {
+  display: inline-block;
+  background: url('../imgs/background02.png') no-repeat -98px -150px;
+  width: 175px;
+  height: 51px;
+}
+
+.sprite_plus_icon {
+  display: inline-block;
+  background: url('../imgs/background01.png') no-repeat -187px -202px;
+  width: 23px;
+  height: 23px;
+}
+
+
 .m_text{
   font-size: 14px;
   font-weight: bold;
@@ -22,6 +126,8 @@
 .s_text{
   font-size: 12px;
 }
+
+
 
 
 
@@ -47,14 +153,72 @@ body{
   width: 975px;
   height: 77px;
   margin: 0 auto;
+  display: flex; /* header영역 3가지 가로배치 */
+  justify-content: space-between; /* 3가지를 알맞게 배치 */
+  align-items: center; /* header y축 가운데 정렬 */
 }
 
+/* Logo의 a 태그를 없애기 */
 #header .inner .logo > a{
   color:transparent;
 }
 
+#header .inner .logo .sprite_insta_icon{
+  position: relative;
+  margin-right: 30px;
+}
+
+/* 가상 선택자 */
+#header .inner .logo .sprite_insta_icon:after{
+  content: '';
+  width: 1px;
+  height: 28px;
+  background: #000;
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
 #header .inner .logo div {
   vertical-align: middle;
+}
+
+#header .search_box{
+  position: relative;
+}
+
+#search-field{
+  width: 185px;
+  height: 28px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  padding: 3px 30px;
+  color: #999;
+  font-weight: 400;
+  text-align:center;
+  font-size: 14px;
+  outline: none;
+}
+
+
+/* 마우스 대면 placeholder보이게 */
+#search-field::placeholder{
+  font-size: 0;
+}
+
+#search-field:focus:placeholder{
+  font-size: 14px;
+}
+
+#header .search_box .fake_field{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#search-field:focus ~ .fake_field > span:nth-child(1){
+  transform: translateX(-105px);
 }
 
 
