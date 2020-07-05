@@ -293,6 +293,11 @@ body{
 
 .contents .bottom_icon .left_icon > div{
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.contents .bottom_icon .right_icon > div{
+  cursor: pointer;
 }
 
 .contents .likes{
@@ -338,6 +343,12 @@ body{
   background: transparent;
 }
 
+.comment .comment_field input:focus ~ .upload_btn{
+  pointer-events: initial;
+  opacity: 1;
+}
+
+
 .contents .comment_field .upload_btn{
   color:#3897f0;
   position: absolute;
@@ -348,3 +359,5 @@ body{
   pointer-events: none;
   opacity: 0.6;
 }
+
+
