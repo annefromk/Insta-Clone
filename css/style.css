@@ -392,8 +392,49 @@ body{
   color:#262626;
 }
 
+.side_box .detail .id{
+  margin-bottom: 5px;
+}
+
 .side_box .detail .eng_name{
  font-size: 12px;
  font-size: $999;
 
+}
+
+
+.side_box > article{
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 291px;
+  font-size: 14px;
+  color: #262626;
+  font-weight: bold;
+  background: white;
+}
+
+.side_box > article > header .more{
+  font-size: 12px;
+  color: #262626;
+  cursor:pointer;
+}
+
+.thumb_user{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.thumb_user .time{
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  color: #999;
+}
+
+/* 스크롤 영역 */
+.side_box .scroll_inner{
+  height: 182px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
