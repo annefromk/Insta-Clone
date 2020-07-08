@@ -438,3 +438,26 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+/* 반응형 설정 */
+
+@media screen and (max-width:1000px{
+  #header .inner{
+    width: 97.5%;
+  }
+  #main_container .inner{
+    width: 93.5%; 
+  }
+  .contents_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side_box{
+    display: none;
+  }
+
+
+}
+
