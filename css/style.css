@@ -148,6 +148,11 @@ body{
   /* solid는 단선을 의미 */
 }
 
+
+#header .on{
+  position: fixed;
+}
+
 #header .inner{
   /* 높이값은 inner에 줘야함 */
   width: 975px;
@@ -300,6 +305,12 @@ body{
 .contents .bottom_icon .right_icon > div{
   cursor: pointer;
 }
+
+
+.heart_btn.on .sprite_heart_icon_outline {
+  background: url('../imgs/background01.png') no-repeat -26px -261px;
+}
+
 
 .contents .likes{
   padding: 5px 20px;
