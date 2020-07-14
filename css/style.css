@@ -161,12 +161,19 @@ body{
   display: flex; /* header영역 3가지 가로배치 */
   justify-content: space-between; /* 3가지를 알맞게 배치 */
   align-items: center; /* header y축 가운데 정렬 */
+  transition: all 1s; /* 화면전환 */
+}
+
+#header .on .inner{
+  height:52px;
 }
 
 /* Logo의 a 태그를 없애기 */
 #header .inner .logo > a{
   color:transparent;
 }
+
+
 
 #header .inner .logo .sprite_insta_icon{
   position: relative;
@@ -187,6 +194,21 @@ body{
 #header .inner .logo div {
   vertical-align: middle;
 }
+
+#header .inner .logo div:nth-child(2){
+  transform: translateY(2px);
+  transition: all .5s;
+}
+
+#header .on .inner .logo .sprite_insta_icon:after{
+  opacity: 0;
+}
+
+#header .on .inner .log div:nth-child(2){
+  opacity: 0;
+}
+
+
 
 #header .search_box{
   position: relative;
