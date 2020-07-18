@@ -2,7 +2,7 @@
 
 //클릭 이벤트 (anonymous)
 
-const heart = document.querySelector('.heart_btn');
+// const heart = document.querySelector('.heart_btn');
 const header = document.querySelector('#header');
 const sidebox = document.querySelector('.side_box');
 const variableWidth = document.querySelectorAll('.contents_box .contents');
@@ -19,6 +19,15 @@ const delegation = document.querySelectorAll('.contents_box');
 function delegationFunc(e){
 
     let elem = e.taget;
+
+    while(!elem.getAttribute('data-name')){
+        elem = elem.parentNode;
+
+        if(elem.nodeName === 'BODY'){
+            elem = null;
+            return;
+        }
+    }
 
     if(elem.matches('[data-name="haertbeat"]')){
 
@@ -64,7 +73,11 @@ function resizeFunc(){
 
         for(let i=0; i < variableWidth.length; i ++){
 
-            variableWidth[i].removeAttribute('style');
+
+            if(window.innerWidth > 600){
+                variableWidth[i].removeAttribute('style');
+
+            }
           
         }
     }
@@ -82,15 +95,32 @@ function scrollFunc(){
         header.classList.add('on');
         sidebox.classList.add('on');
 
+        if(sidebox){
+            sidebox.classList.add('on');
+        }
+
         resizeFunc();
         
     }else{
         header.classList.remove('on');
-        sidebox.classList.remove('on');
-        sidebox.removeAttribute('style');
+
+        if(sidebox){
+            sidebox.classList.remove('on');
+            sidebox.removeAttribute('style')
+        }
+   
     }
 }
 
+
+// 새로고침 할때마다 상위 노출로 변경
+setTimeout(function(){
+    scrollTo(0,0)
+})
+
+if(delegation){
+    delegation.addEventListener('click', delegationFunc);
+}
 
 window.addEventListener('click', delegationFunc);
 window.addEventListener('resize', resizeFunc);
